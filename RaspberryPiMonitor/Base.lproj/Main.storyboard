@@ -18,19 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOh-fN-P8s">
-                                <rect key="frame" x="151" y="617" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play Video"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xC-4t-q14"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RRC-ub-fLs">
+                                <rect key="frame" x="164" y="318" width="47" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOh-fN-P8s">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
+                                        <state key="normal" title="START"/>
+                                        <connections>
+                                            <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xC-4t-q14"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RRC-ub-fLs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4YG-eh-gw7"/>
+                            <constraint firstItem="RRC-ub-fLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5v-jX-BcA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="PlayButton" destination="uOh-fN-P8s" id="beN-hb-euC"/>
                         <outlet property="outlet" destination="8bC-Xf-vdC" id="30R-3X-Tkr"/>
                     </connections>
                 </viewController>

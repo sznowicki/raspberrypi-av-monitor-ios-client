@@ -12,7 +12,16 @@ import AVFoundation
 class ViewController: UIViewController {
 
     @IBOutlet var outlet: UIView!
-    
+
+    @IBOutlet weak var PlayButton: UIButton!
+    var isReady = false
+    override func viewWillAppear(_ animated: Bool) {
+        if (!isReady) {
+            PlayButton.isHidden = true
+        }
+        // TODO make it dynamic
+        PlayButton.isHidden = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -41,14 +50,8 @@ class ViewController: UIViewController {
     
         view.layer.addSublayer(playerLayer)
 
-        // Create a new AVPlayerViewController and pass it a reference to the player.
-//        let controller = AVPlayerViewController()
-//        controller.player = player
-        
-        // Modally present the player and call the player's play() method when complete.
-//        present(controller, animated: true) {
-            player.play()
-//        }
+        player.play()
+        PlayButton.isHidden = true
     }
     
 }

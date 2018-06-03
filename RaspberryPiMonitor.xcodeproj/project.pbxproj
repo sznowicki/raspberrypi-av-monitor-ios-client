@@ -22,6 +22,7 @@
 		C60E842C20C471AC00557AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C60E842F20C471AC00557AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60E843120C471AC00557AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C60E843A20C481F000557AB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 				C60E842C20C471AC00557AB7 /* Assets.xcassets */,
 				C60E842E20C471AC00557AB7 /* LaunchScreen.storyboard */,
 				C60E843120C471AC00557AB7 /* Info.plist */,
+				C60E843A20C481F000557AB7 /* README.md */,
 			);
 			path = RaspberryPiMonitor;
 			sourceTree = "<group>";
