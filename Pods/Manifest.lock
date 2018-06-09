@@ -1,0 +1,16 @@
+PODS:
+  - MJPEGStreamLib (0.2.0)
+
+DEPENDENCIES:
+  - MJPEGStreamLib
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MJPEGStreamLib
+
+SPEC CHECKSUMS:
+  MJPEGStreamLib: b6369fb6370413b9f76ef0df2c1cac985ee34bfa
+
+PODFILE CHECKSUM: cb7cca479716707f620daf20ee3b8d66d9ce74af
+
+COCOAPODS: 1.5.3

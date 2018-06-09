@@ -12,9 +12,11 @@
 		C60E842B20C471AA00557AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60E842920C471AA00557AB7 /* Main.storyboard */; };
 		C60E842D20C471AC00557AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C60E842C20C471AC00557AB7 /* Assets.xcassets */; };
 		C60E843020C471AC00557AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60E842E20C471AC00557AB7 /* LaunchScreen.storyboard */; };
+		C62DA10620CC572600C7AD83 /* Pods_RaspberryPiMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C62DA10520CC572600C7AD83 /* Pods_RaspberryPiMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1CBDDC3C3FB0AA3B17A6F2 /* Pods-RaspberryPiMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaspberryPiMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-RaspberryPiMonitor/Pods-RaspberryPiMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		C60E842220C471AA00557AB7 /* RaspberryPiMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaspberryPiMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E842520C471AA00557AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C60E842720C471AA00557AB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,6 +25,9 @@
 		C60E842F20C471AC00557AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C60E843120C471AC00557AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C60E843A20C481F000557AB7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C62DA10320CC570600C7AD83 /* Classes */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Classes; path = /Users/snowicki/xcode/RPiMonitor/RaspberryPiMonitor/Pods/MJPEGStreamLib/MJPEGStreamLib.framework/Classes; sourceTree = "<absolute>"; };
+		C62DA10520CC572600C7AD83 /* Pods_RaspberryPiMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_RaspberryPiMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C87AEEE08D45E732582D1A75 /* Pods-RaspberryPiMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RaspberryPiMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RaspberryPiMonitor/Pods-RaspberryPiMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C62DA10620CC572600C7AD83 /* Pods_RaspberryPiMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77E359B3FDDE14FB81B10C6E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C87AEEE08D45E732582D1A75 /* Pods-RaspberryPiMonitor.debug.xcconfig */,
+				2D1CBDDC3C3FB0AA3B17A6F2 /* Pods-RaspberryPiMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C60E841920C471AA00557AB7 = {
 			isa = PBXGroup;
 			children = (
 				C60E842420C471AA00557AB7 /* RaspberryPiMonitor */,
 				C60E842320C471AA00557AB7 /* Products */,
+				C62DA10220CC570600C7AD83 /* Frameworks */,
+				77E359B3FDDE14FB81B10C6E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +83,15 @@
 			path = RaspberryPiMonitor;
 			sourceTree = "<group>";
 		};
+		C62DA10220CC570600C7AD83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C62DA10520CC572600C7AD83 /* Pods_RaspberryPiMonitor.framework */,
+				C62DA10320CC570600C7AD83 /* Classes */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C60E843420C471AC00557AB7 /* Build configuration list for PBXNativeTarget "RaspberryPiMonitor" */;
 			buildPhases = (
+				97A57635EE5CFA29B7F027AA /* [CP] Check Pods Manifest.lock */,
 				C60E841E20C471AA00557AB7 /* Sources */,
 				C60E841F20C471AA00557AB7 /* Frameworks */,
 				C60E842020C471AA00557AB7 /* Resources */,
+				FD24B52DE4397684DBE17F50 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		97A57635EE5CFA29B7F027AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RaspberryPiMonitor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD24B52DE4397684DBE17F50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RaspberryPiMonitor/Pods-RaspberryPiMonitor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MJPEGStreamLib/MJPEGStreamLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJPEGStreamLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RaspberryPiMonitor/Pods-RaspberryPiMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C60E841E20C471AA00557AB7 /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		C60E843520C471AC00557AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C87AEEE08D45E732582D1A75 /* Pods-RaspberryPiMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +367,7 @@
 		};
 		C60E843620C471AC00557AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D1CBDDC3C3FB0AA3B17A6F2 /* Pods-RaspberryPiMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

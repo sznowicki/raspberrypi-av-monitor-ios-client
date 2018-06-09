@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,36 +15,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RaspberryPiMonitor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RRC-ub-fLs">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RRC-ub-fLs">
                                 <rect key="frame" x="164" y="318" width="47" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOh-fN-P8s">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOh-fN-P8s">
                                         <rect key="frame" x="0.0" y="0.0" width="47" height="30"/>
                                         <state key="normal" title="START"/>
                                         <connections>
                                             <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1xC-4t-q14"/>
+                                            <action selector="startTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QD-Zb-6lX"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-UD-nPY">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="RRC-ub-fLs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4YG-eh-gw7"/>
-                            <constraint firstItem="RRC-ub-fLs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U5v-jX-BcA"/>
+                            <constraint firstItem="GDP-UD-nPY" firstAttribute="trailing" secondItem="VJy-Zu-hD6" secondAttribute="trailing" id="9sd-aZ-hfz"/>
+                            <constraint firstItem="GDP-UD-nPY" firstAttribute="leading" secondItem="VJy-Zu-hD6" secondAttribute="leading" id="XHh-9b-cS7"/>
+                            <constraint firstItem="GDP-UD-nPY" firstAttribute="bottom" secondItem="VJy-Zu-hD6" secondAttribute="bottom" id="sdJ-UV-LZ5"/>
+                            <constraint firstItem="GDP-UD-nPY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xeR-U3-Pnw"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="VJy-Zu-hD6"/>
                     </view>
                     <connections>
                         <outlet property="PlayButton" destination="uOh-fN-P8s" id="beN-hb-euC"/>
+                        <outlet property="VideoStreamImage" destination="GDP-UD-nPY" id="utN-Xe-Lch"/>
                         <outlet property="outlet" destination="8bC-Xf-vdC" id="30R-3X-Tkr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-751.7578125" y="-358.59375"/>
         </scene>
     </scenes>
 </document>
