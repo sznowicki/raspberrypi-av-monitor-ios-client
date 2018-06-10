@@ -35,11 +35,20 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-UD-nPY">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exf-wr-c0X">
+                                <rect key="frame" x="903" y="728" width="111" height="30"/>
+                                <state key="normal" title="Skip to real time"/>
+                                <connections>
+                                    <action selector="skipToRealTimeButtonClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbS-lw-7yF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="GDP-UD-nPY" firstAttribute="trailing" secondItem="VJy-Zu-hD6" secondAttribute="trailing" id="9sd-aZ-hfz"/>
+                            <constraint firstItem="VJy-Zu-hD6" firstAttribute="trailing" secondItem="exf-wr-c0X" secondAttribute="trailing" constant="10" id="VVg-P5-pwD"/>
                             <constraint firstItem="GDP-UD-nPY" firstAttribute="leading" secondItem="VJy-Zu-hD6" secondAttribute="leading" id="XHh-9b-cS7"/>
+                            <constraint firstItem="VJy-Zu-hD6" firstAttribute="bottom" secondItem="exf-wr-c0X" secondAttribute="bottom" constant="10" id="aPp-Da-U9m"/>
                             <constraint firstItem="GDP-UD-nPY" firstAttribute="bottom" secondItem="VJy-Zu-hD6" secondAttribute="bottom" id="sdJ-UV-LZ5"/>
                             <constraint firstItem="GDP-UD-nPY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xeR-U3-Pnw"/>
                         </constraints>
@@ -47,6 +56,7 @@
                     </view>
                     <connections>
                         <outlet property="PlayButton" destination="uOh-fN-P8s" id="beN-hb-euC"/>
+                        <outlet property="SkipToRT" destination="exf-wr-c0X" id="wfK-Z1-arl"/>
                         <outlet property="VideoStreamImage" destination="GDP-UD-nPY" id="utN-Xe-Lch"/>
                         <outlet property="outlet" destination="8bC-Xf-vdC" id="30R-3X-Tkr"/>
                     </connections>
