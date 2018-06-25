@@ -9,6 +9,7 @@
 import UIKit
 import AVKit
 import MJPEGStreamLib
+import MediaPlayer
 
 class ViewController: UIViewController {
 
@@ -34,12 +35,32 @@ class ViewController: UIViewController {
         }
         // TODO make it dynamic
         PlayButton.isHidden = false
+//        SkipToRT.isHidden = false
     
         executeRepeatedly()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func setNowPlayingInfo()
+    {
+        let nowPlayingInfoCenter = MPNowPlayingInfoCenter.default()
+        var nowPlayingInfo = nowPlayingInfoCenter.nowPlayingInfo ?? [String: Any]()
+        
+        let title = "Microphone feed"
+        let album = "RaspberryPi AV Monitor"
+        
+        nowPlayingInfo[MPMediaItemPropertyTitle] = title
+        nowPlayingInfo[MPMediaItemPropertyAlbumTitle] = album
+        
+        nowPlayingInfoCenter.nowPlayingInfo = nowPlayingInfo
+    }
+    
+    @IBAction func startPlayingButtonPressed(_ sender: Any)
+    {
+        playAudio()
     }
     
 
@@ -58,9 +79,10 @@ class ViewController: UIViewController {
         // TODO: check if is playing, reload only if not
         stopVideo()
         playVideo()
-        
-        stopAudio()
-        playAudio()
+        if (AudioPlayer?.rate == nil || !(AudioPlayer?.rate != 0 && AudioPlayer?.error == nil)) {
+            stopAudio()
+            playAudio()
+        }
     }
     func playVideo() {
         PlayButton.isHidden = true
@@ -120,7 +142,7 @@ class ViewController: UIViewController {
     func executeRepeatedly() {
         reload()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 180) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 120) { [weak self] in
             self?.executeRepeatedly()
         }
     }
